@@ -32,7 +32,8 @@ namespace WakeHelper
         }
       }
 
-      WindowState = FormWindowState.Minimized;
+      this.WindowState = FormWindowState.Minimized;
+      this.ShowInTaskbar = false;
     }
     private static void monitorPowerState()
     {
@@ -143,9 +144,7 @@ namespace WakeHelper
 
     private void btnSave_Click(object sender, EventArgs e)
     {
-      trayIcon.Visible = true;
-      saveSettings();
-      this.Hide();
+      this.WindowState = FormWindowState.Minimized;
     }
 
     private void loadSettings()
@@ -226,16 +225,15 @@ namespace WakeHelper
 
     private void trayIcon_Click(object sender, EventArgs e)
     {
-      this.WindowState = FormWindowState.Normal;
       this.Show();
+      this.WindowState = FormWindowState.Normal;
     }
 
     private void Form1_FormClosing(object sender, FormClosingEventArgs e)
     {
       saveSettings();
       e.Cancel = true;
-      trayIcon.Visible = true;
-      this.Hide();
+      this.WindowState = FormWindowState.Minimized;
     }
 
     private void btnRemoveItem_Click(object sender, EventArgs e)
@@ -272,8 +270,17 @@ namespace WakeHelper
 
     private void Form1_Resize(object sender, EventArgs e)
     {
-      trayIcon.Visible = true;
-      this.Hide();
+      if (FormWindowState.Minimized == this.WindowState)
+      {
+        trayIcon.Visible = true;
+        this.Hide();
+      }
+
+      else if (FormWindowState.Normal == this.WindowState)
+      {
+        trayIcon.Visible = false;
+        this.Show();
+      }
     }
   }
 }

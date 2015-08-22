@@ -40,11 +40,11 @@
       this.lblExeName = new System.Windows.Forms.Label();
       this.gbProgramsAfterWake = new System.Windows.Forms.GroupBox();
       this.lblRestartDelay = new System.Windows.Forms.Label();
+      this.tbRestartDelay = new System.Windows.Forms.TextBox();
       this.btnRemoveItem = new System.Windows.Forms.Button();
       this.btnSave = new System.Windows.Forms.Button();
       this.btnExitProgram = new System.Windows.Forms.Button();
       this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
-      this.tbRestartDelay = new System.Windows.Forms.TextBox();
       this.gbProgramsAfterWake.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -141,6 +141,16 @@
       this.lblRestartDelay.TabIndex = 8;
       this.lblRestartDelay.Text = "Restart delay (ms)";
       // 
+      // tbRestartDelay
+      // 
+      this.tbRestartDelay.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WakeHelper.Properties.Settings.Default, "restartDelay", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+      this.tbRestartDelay.Location = new System.Drawing.Point(98, 323);
+      this.tbRestartDelay.Name = "tbRestartDelay";
+      this.tbRestartDelay.Size = new System.Drawing.Size(63, 20);
+      this.tbRestartDelay.TabIndex = 7;
+      this.tbRestartDelay.Text = global::WakeHelper.Properties.Settings.Default.restartDelay;
+      this.tbRestartDelay.Validating += new System.ComponentModel.CancelEventHandler(this.tbRestartDelay_Validating);
+      // 
       // btnRemoveItem
       // 
       this.btnRemoveItem.Location = new System.Drawing.Point(176, 323);
@@ -176,16 +186,6 @@
       this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
       this.trayIcon.Text = "Wake Helper";
       this.trayIcon.Click += new System.EventHandler(this.trayIcon_Click);
-      // 
-      // tbRestartDelay
-      // 
-      this.tbRestartDelay.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WakeHelper.Properties.Settings.Default, "restartDelay", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-      this.tbRestartDelay.Location = new System.Drawing.Point(98, 323);
-      this.tbRestartDelay.Name = "tbRestartDelay";
-      this.tbRestartDelay.Size = new System.Drawing.Size(63, 20);
-      this.tbRestartDelay.TabIndex = 7;
-      this.tbRestartDelay.Text = global::WakeHelper.Properties.Settings.Default.restartDelay;
-      this.tbRestartDelay.Validating += new System.ComponentModel.CancelEventHandler(this.tbRestartDelay_Validating);
       // 
       // Form1
       // 
