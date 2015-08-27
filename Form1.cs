@@ -32,7 +32,11 @@ namespace WakeHelper
         }
       }
 
-      this.WindowState = FormWindowState.Minimized;
+      if(listRestartProgram.Count > 0)
+      {
+        this.WindowState = FormWindowState.Minimized;
+      }
+
       this.ShowInTaskbar = false;
     }
     private static void monitorPowerState()

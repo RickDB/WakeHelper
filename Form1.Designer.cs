@@ -34,7 +34,7 @@
       this.btnAddProgram = new System.Windows.Forms.Button();
       this.lvProgramRestart = new System.Windows.Forms.ListView();
       this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-      this.chEXEname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+      this.chEXEPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
       this.tbExeName = new System.Windows.Forms.TextBox();
       this.lblProgramName = new System.Windows.Forms.Label();
       this.lblExeName = new System.Windows.Forms.Label();
@@ -57,9 +57,9 @@
       // 
       // btnAddProgram
       // 
-      this.btnAddProgram.Location = new System.Drawing.Point(393, 39);
+      this.btnAddProgram.Location = new System.Drawing.Point(768, 12);
       this.btnAddProgram.Name = "btnAddProgram";
-      this.btnAddProgram.Size = new System.Drawing.Size(75, 43);
+      this.btnAddProgram.Size = new System.Drawing.Size(153, 70);
       this.btnAddProgram.TabIndex = 1;
       this.btnAddProgram.Text = "Add";
       this.btnAddProgram.UseVisualStyleBackColor = true;
@@ -69,23 +69,23 @@
       // 
       this.lvProgramRestart.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chName,
-            this.chEXEname});
+            this.chEXEPath});
       this.lvProgramRestart.Location = new System.Drawing.Point(0, 88);
       this.lvProgramRestart.Name = "lvProgramRestart";
-      this.lvProgramRestart.Size = new System.Drawing.Size(468, 226);
+      this.lvProgramRestart.Size = new System.Drawing.Size(921, 226);
       this.lvProgramRestart.TabIndex = 2;
       this.lvProgramRestart.UseCompatibleStateImageBehavior = false;
       this.lvProgramRestart.View = System.Windows.Forms.View.Details;
       // 
       // chName
       // 
-      this.chName.Text = "Name";
+      this.chName.Text = "Display name";
       this.chName.Width = 247;
       // 
-      // chEXEname
+      // chEXEPath
       // 
-      this.chEXEname.Text = "Exe name";
-      this.chEXEname.Width = 151;
+      this.chEXEPath.Text = "Exe path";
+      this.chEXEPath.Width = 658;
       // 
       // tbExeName
       // 
@@ -93,7 +93,7 @@
       this.tbExeName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
       this.tbExeName.Location = new System.Drawing.Point(105, 62);
       this.tbExeName.Name = "tbExeName";
-      this.tbExeName.Size = new System.Drawing.Size(282, 20);
+      this.tbExeName.Size = new System.Drawing.Size(619, 20);
       this.tbExeName.TabIndex = 3;
       // 
       // lblProgramName
@@ -101,9 +101,9 @@
       this.lblProgramName.AutoSize = true;
       this.lblProgramName.Location = new System.Drawing.Point(5, 39);
       this.lblProgramName.Name = "lblProgramName";
-      this.lblProgramName.Size = new System.Drawing.Size(75, 13);
+      this.lblProgramName.Size = new System.Drawing.Size(70, 13);
       this.lblProgramName.TabIndex = 4;
-      this.lblProgramName.Text = "Program name";
+      this.lblProgramName.Text = "Display name";
       // 
       // lblExeName
       // 
@@ -127,7 +127,7 @@
       this.gbProgramsAfterWake.Controls.Add(this.tbExeName);
       this.gbProgramsAfterWake.Location = new System.Drawing.Point(12, 12);
       this.gbProgramsAfterWake.Name = "gbProgramsAfterWake";
-      this.gbProgramsAfterWake.Size = new System.Drawing.Size(474, 349);
+      this.gbProgramsAfterWake.Size = new System.Drawing.Size(927, 349);
       this.gbProgramsAfterWake.TabIndex = 6;
       this.gbProgramsAfterWake.TabStop = false;
       this.gbProgramsAfterWake.Text = "Programs to restart after wake";
@@ -153,7 +153,7 @@
       // 
       // btnRemoveItem
       // 
-      this.btnRemoveItem.Location = new System.Drawing.Point(176, 323);
+      this.btnRemoveItem.Location = new System.Drawing.Point(780, 321);
       this.btnRemoveItem.Name = "btnRemoveItem";
       this.btnRemoveItem.Size = new System.Drawing.Size(141, 23);
       this.btnRemoveItem.TabIndex = 6;
@@ -173,7 +173,7 @@
       // 
       // btnExitProgram
       // 
-      this.btnExitProgram.Location = new System.Drawing.Point(350, 378);
+      this.btnExitProgram.Location = new System.Drawing.Point(797, 382);
       this.btnExitProgram.Name = "btnExitProgram";
       this.btnExitProgram.Size = new System.Drawing.Size(136, 34);
       this.btnExitProgram.TabIndex = 7;
@@ -191,7 +191,7 @@
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(511, 428);
+      this.ClientSize = new System.Drawing.Size(951, 428);
       this.Controls.Add(this.btnExitProgram);
       this.Controls.Add(this.btnSave);
       this.Controls.Add(this.gbProgramsAfterWake);
@@ -212,7 +212,7 @@
     private System.Windows.Forms.Button btnAddProgram;
     private System.Windows.Forms.ListView lvProgramRestart;
     private System.Windows.Forms.ColumnHeader chName;
-    private System.Windows.Forms.ColumnHeader chEXEname;
+    private System.Windows.Forms.ColumnHeader chEXEPath;
     private System.Windows.Forms.TextBox tbExeName;
     private System.Windows.Forms.Label lblProgramName;
     private System.Windows.Forms.Label lblExeName;
